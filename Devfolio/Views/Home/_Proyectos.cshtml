@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Devfolio.Models.Proyecto>
+
+@{
+    // Función razor: para agregar un icono de acuerdo a si la app tiene GUI o no...
+    string ObtenerIcono(String tecnologia) => tecnologia.ToLower() switch
+    {
+        var t when t.Contains("bootstrap") => "🎨",
+        var t when t.Contains("entity") => "🗃️",
+        _ => ""
+    };
+}
+
+<!-- Sección para mostrar proyectos -->
+<div class="container m-2 py-4">
+    <h3 class="fw-bold">Mis proyectos</h3>
+    <div class="row mt-3">
+        @foreach (var proyecto in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm p-3">
+                    <h5 class="card-title">
+                        @ObtenerIcono(proyecto.Tecnologias)
+                        @proyecto.Nombre
+                        @if (proyecto.Destacado)
+                        {
+                            <span class="badge bg-success">Destacado</span>
+                        }
+                    </h5>
+                    <p class="card-text">@proyecto.Descripcion</p>
+                    <p><strong>Tecnologías:</strong> @proyecto.Tecnologias </p>
+                    <a href="@proyecto.Enlace" class="btn btn-primary" target="_blank">Ver proyecto</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

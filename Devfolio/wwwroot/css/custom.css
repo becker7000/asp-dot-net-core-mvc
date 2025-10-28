@@ -1,0 +1,41 @@
+﻿
+.titulo {
+    color: #111112;
+    font-family: 'Arial Rounded MT';
+    font-size: 3em;
+}
+
+.subtitulo {
+    color: #1e1e2e;
+    font-size: 1.5em;
+}
+
+#sobre-mi{
+    height: 380px;
+}
+
+.habilidades{
+    margin-top: -120px;
+    box-shadow: 0 8px 8px 0 darkblue;
+    padding-bottom: 20px;
+}
+
+.habilidad{
+    border-radius: 20px;
+    margin: 0 8px;
+    box-shadow: 0 4px 4px 0 darkblue;
+}
+
+.habilidad ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.habilidad h4{
+    color: darkblue;
+}
+
+.habilidad i {
+    color: darkblue;
+    font-size: 48px;
+}

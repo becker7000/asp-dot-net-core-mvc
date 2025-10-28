@@ -1,0 +1,11 @@
+﻿
+@{
+	// Variable razor para agregar un dato a la vista.
+	DateTime fechaActual = DateTime.Now;
+}
+
+<!-- Encabezdo general -->
+<h1 class="titulo">@ViewBag.Bienvenida</h1>
+<p class="subtitulo">@ViewBag.Presentacion</p>
+<p>Número favorito: @ViewBag.Numero - Hoy es: <span>@fechaActual.ToString("dd/MM/yyyy")</span></p>
+<img src="~/imagenes/programador.jpg" alt="Programador" width="200px" class="m-2 rounded-circle img-thumbnail" />
