@@ -1,0 +1,385 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<h1>Hola a todos con ASP.NET Core 9</h1>
+<p>
+	Hola a todos desde una webapp con ASP.NET Core.
+	Con este proyecto pretendemos revisar como funciona Boostrap.
+	Boostrap es un framework creado por twitter y simplifica la insersión de estilos.
+</p>
+
+<hr />
+<h2>Manejo de filas y columnas</h2>
+<hr />
+
+<h5>Ejemplo 1: </h5>
+<!-- Atajo: div.row>div.col*3 -->
+<div class="row">
+	<div class="col">
+		Enero
+	</div>
+	<div class="col-6">
+		<!-- primero con: <div class="col"> -->
+		Febrero
+	</div>
+	<div class="col">
+		Marzo
+	</div>
+</div>
+
+<!-- El máximo de columnas es 12, podemos agregar más -->
+<!-- Atajo con ZenCoding: div.row>div.col*4 + tab -->
+<div class="row">
+	<div class="col">
+		Nivel 1
+	</div>
+	<div class="col">
+		Nivel 2
+	</div>
+	<div class="col">
+		Nivel 3
+	</div>
+	<div class="col">
+		Nivel 4
+	</div>
+</div>
+
+<hr />
+<h5>Ejemplo 2 (responsivo):</h5>
+
+<div class="row">
+	<div class="col-sm-4">
+		Inglés
+	</div>
+	<div class="col-sm-4">
+		Francés
+	</div>
+	<div class="col-sm-4">
+		Alemán
+	</div>
+</div>
+
+<hr />
+<h5>Ejemplo 3 (gutters):</h5>
+
+<!--gx-sm-0 gx-md-3 gx-lg-5-->
+<div class="row gx-sm-0 gx-md-3 gx-lg-5">
+	<!-- probar con gx-0, gx-1, gx-2, gx-5 -->
+	<div class="col border-0">
+		<div class="bg-primary text-white">
+			Curso básico
+		</div>
+	</div>
+	<div class="col border-0">
+		<div class="bg-secondary text-white">
+			Curso plus
+		</div>
+	</div>
+</div>
+
+<br />
+<br />
+<hr />
+<h2>Manejo de imágenes</h2>
+<!-- Con AltGr + click podemos colocar el cursor en varias líneas -->
+<!-- Primero probar sin class=img-fluid -->
+<hr />
+
+<br />
+<h5>Albert Einstein</h5>
+<img class="img-thumbnail rounded-circle" src="https://cdn.pixabay.com/photo/2016/01/17/14/23/albert-einstein-1144965_1280.jpg" width="200" />
+
+<hr />
+<h5>London</h5>
+<br />
+<div class="row">
+	<div class="col-sm-3 border-0">
+		<!-- class=col-3, class=col -->
+		<img class="img-fluid" src="https://cdn.pixabay.com/photo/2021/08/15/07/35/ferris-wheel-6547089_1280.jpg" />
+	</div>
+	<div class="col-sm-3 border-0 ">
+		<img class="img-fluid" src="https://cdn.pixabay.com/photo/2021/08/15/07/35/ferris-wheel-6547089_1280.jpg" />
+	</div>
+	<div class="col-sm-3 border-0">
+		<img class="img-fluid" src="https://cdn.pixabay.com/photo/2021/08/15/07/35/ferris-wheel-6547089_1280.jpg" />
+	</div>
+	<div class="col-sm-3 border-0">
+		<img class="img-fluid" src="https://cdn.pixabay.com/photo/2021/08/15/07/35/ferris-wheel-6547089_1280.jpg" />
+	</div>
+</div>
+
+<br />
+<br />
+<button class="btn btn-primary col-3" type="button">
+	Iniciar curso
+</button>
+
+<hr />
+<h2>Manejo de tablas</h2>
+<hr />
+<!--
+container my-5: margen de 48px (aprox) arriba y abajo
+table table-striped: alterna colores por fila.
+table-hover: resalta la fila al pasar el mouse.
+table-bordered: agrega bordes a todas las celdas.
+table-borderless: sin bordes.
+table-primary: da color al encabezado (puedes cambiar a table-dark, table-success, etc.).
+align-middle: centra verticalmente el texto en las celdas.
+-->
+<!-- Primero mostrar sin clases, para ver el cambio... -->
+<div class="container my-5">
+	<h5>Cursos disponibles</h5>
+	<table class="table table-striped table-hover table-bordeless align-middle">
+		<thead class="table-primary">
+			<tr class="text-center">
+				<th>ID</th>
+				<th>Idioma</th>
+				<th>Nivel</th>
+				<th>Profesor</th>
+				<th>Horario</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="text-center">
+				<td>001</td>
+				<td>Francés</td>
+				<td>Básico</td>
+				<td>Andrea Castillo</td>
+				<td>Lunes y Miércoles 7:00 PM - 9:00 PM</td>
+				<td>$5000 MXN</td>
+			</tr>
+			<tr class="text-center">
+				<td>001</td>
+				<td>Inglés</td>
+				<td>Básico</td>
+				<td>Laura López</td>
+				<td>Lunes y Miércoles 7:00 PM - 9:00 PM</td>
+				<td>$5000 MXN</td>
+			</tr>
+			<tr class="text-center">
+				<td>002</td>
+				<td>Inglés</td>
+				<td>Intermedio</td>
+				<td>Roberto Olivares</td>
+				<td>Martes y Jueves 7:00 PM - 9:00 PM</td>
+				<td>$6000 MXN</td>
+			</tr>
+			<tr class="text-center">
+				<td>003</td>
+				<td>Inglés</td>
+				<td>Avanzado</td>
+				<td>Carlos Ramirez</td>
+				<td>Miércoles y Viernes 7:00 PM - 9:00 PM</td>
+				<td>$8000 MXN</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<hr />
+<h2>Manejo de video</h2>
+<hr />
+<h5>Aprender idiomas</h5>
+<div class="ratio ratio-16x9">
+	<!-- Primero mostrar sin ratio y probar responsivo -->
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/YFsuefrt7e0?si=E38aQCm9ZtbpguLn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<hr />
+
+<!-- Atajo: div.row>div.col-md-4*3 + tab ->
+<!-- Con gutters para separar -->
+<div class="row gy-4"> 
+	<div class="col-md-4 border-0">
+		<div class="ratio ratio-16x9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/YFsuefrt7e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-md-4 border-0">
+		<div class="ratio ratio-16x9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/YFsuefrt7e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-md-4 border-0">
+		<div class="ratio ratio-16x9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/YFsuefrt7e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+<hr />
+<h2>Manejo de anchuras</h2>
+<hr />
+<!--
+	p-3: padding de 16px aprox
+	m-2: margin de 8px aprox
+	w-x: anchura de un porcentaje x
+	bg-x: fondo de x tipo
+-->
+<div class="w-25 p-3 m-2 bg-primary">25% del contenedor</div>
+<div class="w-50 p-3 m-2 bg-secondary">50% del contenedor</div>
+<div class="w-75 p-3 m-2 bg-warning">75% del contenedor</div>
+<div class="w-100 p-3 m-2 bg-danger text-white">100% del contenedor</div>
+<div class="w-auto p-3 m-2 bg-success text-white">Automatico</div>
+
+<hr />
+<h2>Manejo de alturas</h2>
+<hr />
+
+<!-- Atajo: div.bg-info>div.h-25.d-inline-block*5 -->
+<div style="height: 200px" class="bg-light">
+	<div class="h-25 p-2 d-inline-block bg-primary" style="width:200px">25% del contenedor</div>
+	<div class="h-50 p-2 d-inline-block bg-secondary" style="width:200px">50% del contenedor</div>
+	<div class="h-75 p-2 d-inline-block bg-warning" style="width:200px">75% del contenedor</div>
+	<div class="h-100 p-2 d-inline-block bg-danger text-white" style="width:200px">100% del contenedor</div>
+	<div class="h-auto p-2 d-inline-block bg-success text-white" style="width:200px">Automatico</div>
+</div>
+
+
+<hr />
+<h2>Manejo de margenes</h2>
+<hr />
+
+<h5 class="mb-4 text-center">Ejemplo de márgenes (clases m-*)</h5>
+
+<!-- Caja sin margen -->
+<div class="bg-primary text-white p-3">
+	Sin margen (por defecto)
+</div>
+
+<!-- Caja con margen superior -->
+<div class="bg-success text-white p-3 mt-3">
+	mt-3 (margen superior)
+</div>
+
+<!-- Caja con margen inferior -->
+<div class="bg-warning text-dark p-3 mb-4">
+	mb-4 (margen inferior)
+</div>
+
+<!-- Caja con márgenes en todos los lados -->
+<div class="bg-danger text-white p-3 m-5">
+	m-5 (margen en todos los lados)
+</div>
+
+<!--
+	m{lado}-{tam}
+	lado: t (top), b (bottom), s (start), e (end), x (horizontal), y (vertical) o nada (todos los lados).
+	tam: 0 a 5 (o auto).
+-->
+
+<hr />
+<h2>Manejo de alineación de texto</h2>
+<hr />
+
+<p class="text-start">Texto a la izquierda</p>
+<p class="text-center">Texto al centro</p>
+<p class="text-end">Texto a la derecha</p>
+
+<hr />
+<h2>Manejo de formularios</h2>
+<hr />
+
+<!-- mb-3 (margen bottom nivel 3) -->
+<form class="w-50 p-4 bg-info-subtle">
+	<div class="form-floating mb-3">
+		<input type="text" class="form-control"/>
+		<label>Nombre</label>
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Email</label>
+		<input type="email" class="form-control" />
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Nivel de inglés</label>
+		<textarea class="form-control" rows="3" style="resize: none;"></textarea>
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Selecciona un color</label>
+		<select class="form-select">
+			<option value="1" selected>Azul</option>
+			<option value="2">Verde</option>
+			<option value="3">Rojo</option>
+			<option value="4">Amarillo</option>
+		</select>
+	</div>
+	<div class="form-check mb-3">
+		<input class="form-check-input" type="checkbox" checked /> <!-- checked para dejarlo marcado-->
+		<label class="form-label ms-2">Ya soy socio</label>
+	</div>
+	<div class="form-check mb-3">
+		<input type="radio" class="form-check-input" name="edad" />
+		<label class="form-label ms-2">Soy mayor de edad</label>
+	</div>
+	<div class="form-check mb-3">
+		<input type="radio" class="form-check-input" name="edad" />
+		<label class="form-label ms-2">Soy menor de edad</label>
+	</div>
+	<div class="mb-3">
+		<button type="submit" class="btn btn-primary btn-animated w-100">
+			Enviar datos
+		</button>
+	</div>
+</form>
+
+<!-- Creando un acordeón con Bootstrap -->
+<div class="container py-4">
+	
+	<hr/>
+	<h2 class="mb-2">Manejo de acordeones</h2>
+	<hr/>
+
+	<div class="accordion" id="mi-acordeon">
+		
+		<!-- Item 1 -->
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="cab-1">
+				<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#colap-1">
+					¿Qué idiomas ofrecemos?
+				</button>
+			</h2>
+			<div id="colap-1" class="accordion-collapse collapse" data-bs-parent="#mi-acordeon">
+				<div class="accordion-body">
+					Actualmente ofrecemos cursos de <strong>inglés, francés, alemán, italiano y japonés</strong>.
+					Además, cada idioma cuenta con diferentes niveles: <em>básico, intermedio y avanzado</em>.
+				</div>
+			</div>
+		</div>
+
+		<!-- Item 2 -->
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="cab-2">
+				<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#colap-2">
+					¿Las clases son en línea o presenciales?
+				</button>
+			</h2>
+			<div id="colap-2" class="accordion-collapse collapse" data-bs-parent="#mi-acordeon">
+				<div class="accordion-body">
+					Contamos con ambas modalidades.
+					Puedes tomar clases en línea en tiempo real con profesores certificados
+					o asistir a nuestros centros si prefieres una experiencia presencial.
+				</div>
+			</div>
+		</div>
+
+		<!-- Item 3 -->
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="cab-3">
+				<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#colap-3">
+					¿Entregan certificado al finalizar el curso?
+				</button>
+			</h2>
+			<div id="colap-3" class="accordion-collapse collapse" data-bs-parent="#mi-acordeon">
+				<div class="accordion-body">
+					Sí, al completar tu curso obtendrás un <strong>certificado digital de aprovechamiento</strong> 
+					que valida tu nivel según el <em>Marco Común Europeo de Referencia (MCER)</em>.
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
