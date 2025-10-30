@@ -13,6 +13,9 @@ builder.Services.AddTransient<ServicioTransitorio>();
 builder.Services.AddScoped<ServicioDelimitado>();
 builder.Services.AddSingleton<ServicioUnico>();
 
+// Servicio de GMAIL
+builder.Services.AddTransient<IServicioGmail, ServicioGmail>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
